@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_dist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@color/light_gray_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10dp"
+            android:text="请选择查询区域"
+            android:textColor="@color/theme"
+            android:textSize="@dimen/fontSize_16sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/dist_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:src="@drawable/arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_dist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_15dp"
+            android:layout_marginRight="@dimen/margin_15dp"
+            android:layout_toLeftOf="@id/dist_right"
+            tools:text="江苏省" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@color/light_gray_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10dp"
+            android:text="请根据以下用途，选择查询条件(可多选)"
+            android:textColor="@color/theme"
+            android:textSize="@dimen/fontSize_16sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginRight="@dimen/margin_15dp"
+        android:background="@drawable/statistics_layout_background"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/industrial"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:button="@drawable/island_using_check"
+            android:paddingLeft="@dimen/margin_15dp"
+            android:text="工业用途"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="14sp" />
+
+        <View style="@style/HalfDivider" />
+
+        <CheckBox
+            android:id="@+id/tourism"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:button="@drawable/island_using_check"
+            android:paddingLeft="@dimen/margin_15dp"
+            android:text="旅游娱乐用途"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="14sp" />
+
+        <View style="@style/HalfDivider" />
+
+        <CheckBox
+            android:id="@+id/transportation"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:button="@drawable/island_using_check"
+            android:paddingLeft="@dimen/margin_15dp"
+            android:text="交通运输服务用途"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="14sp" />
+
+        <View style="@style/HalfDivider" />
+
+        <CheckBox
+            android:id="@+id/fisheries"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:button="@drawable/island_using_check"
+            android:paddingLeft="@dimen/margin_15dp"
+            android:text="渔业用途"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="14sp" />
+
+        <View style="@style/HalfDivider" />
+
+        <CheckBox
+            android:id="@+id/publicService"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:button="@drawable/island_using_check"
+            android:paddingLeft="@dimen/margin_15dp"
+            android:text="公共服务用途"
+            android:textColor="@color/dark_gray_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_5dp"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:background="@color/light_gray_color">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_10dp"
+            android:text="请选择统计模式"
+            android:textColor="@color/theme"
+            android:textSize="@dimen/fontSize_16sp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginRight="@dimen/margin_15dp"
+        android:background="@drawable/statistics_layout_background"
+        android:gravity="center"
+        android:padding="@dimen/padding_5dp">
+
+        <RadioGroup
+            android:id="@+id/information_radio_group"
+            android:layout_width="@dimen/width_230dp"
+            android:layout_height="@dimen/height_35dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/list"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/background_statistics_selector1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="列表"
+                android:textColor="@drawable/background_statistics_style_color_selector"
+                android:textSize="@dimen/fontSize_14sp" />
+
+            <RadioButton
+                android:id="@+id/barChart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/background_statistics_selector2"
+                android:button="@null"
+                android:gravity="center"
+                android:text="柱状图"
+                android:textColor="@drawable/background_statistics_style_color_selector"
+                android:textSize="@dimen/fontSize_14sp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/go_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginRight="@dimen/margin_15dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:background="@drawable/drawable_button_selector"
+        android:gravity="center"
+        android:text="开始统计"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fontSize_16sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_55dp"
+        android:background="@color/theme">
+
+        <RadioGroup
+            android:id="@+id/information_radio_group"
+            android:layout_width="@dimen/width_230dp"
+            android:layout_height="@dimen/height_35dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/news"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/background_information_selector1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="海岛新闻"
+                android:textColor="@drawable/background_information_font_color_selector"
+                android:textSize="@dimen/fontSize_14sp" />
+
+            <RadioButton
+                android:id="@+id/regulation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/background_information_selector2"
+                android:button="@null"
+                android:gravity="center"
+                android:text="政策法规"
+                android:textColor="@drawable/background_information_font_color_selector"
+                android:textSize="@dimen/fontSize_14sp" />
+        </RadioGroup>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/information_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

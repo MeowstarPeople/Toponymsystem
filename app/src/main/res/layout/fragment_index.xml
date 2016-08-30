@@ -1,0 +1,208 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <include layout="@layout/layout_slideshow" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_15dp"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_15dp">
+
+        <EditText
+            android:id="@+id/edit_seek"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height"
+            android:background="@drawable/island_seek"
+            android:focusable="false"
+            android:paddingBottom="@dimen/margin_5dp"
+            android:paddingLeft="@dimen/margin_two"
+            android:paddingTop="@dimen/margin_10dp" />
+
+        <TextView
+            android:id="@+id/text_edit_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/home_search_icon"
+            android:drawablePadding="@dimen/margin_10dp"
+            android:gravity="center"
+            android:text="搜索海岛"
+            android:textSize="@dimen/fontSize_16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_tourist_recreation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_35dp"
+                    android:background="@color/white"
+                    android:checked="true"
+                    android:button="@null"
+                    android:drawableRight="@drawable/check_box"
+                    android:text="旅游娱乐用途海岛"
+                    android:textColor="@color/color_8a8a8a" />
+
+                <toponymsystem.island.com.widget.CustomGridView
+                    android:id="@+id/gv_tourist_recreation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:paddingLeft="@dimen/padding_5dp"
+                    android:paddingRight="@dimen/padding_5dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_industry"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_35dp"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableRight="@drawable/check_box"
+                    android:text="工业用途海岛"
+                    android:textColor="@color/color_8a8a8a" />
+
+                <toponymsystem.island.com.widget.CustomGridView
+                    android:id="@+id/gv_industry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:paddingLeft="@dimen/padding_5dp"
+                    android:paddingRight="@dimen/padding_5dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_fishery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_35dp"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableRight="@drawable/check_box"
+                    android:text="渔业用途海岛"
+                    android:textColor="@color/color_8a8a8a" />
+
+                <toponymsystem.island.com.widget.CustomGridView
+                    android:id="@+id/gv_fishery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:paddingLeft="@dimen/padding_5dp"
+                    android:paddingRight="@dimen/padding_5dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_public_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_35dp"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableRight="@drawable/check_box"
+                    android:text="公共服务用途海岛"
+                    android:textColor="@color/color_8a8a8a" />
+
+                <toponymsystem.island.com.widget.CustomGridView
+                    android:id="@+id/gv_public_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:paddingLeft="@dimen/padding_5dp"
+                    android:paddingRight="@dimen/padding_5dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_transportation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_35dp"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:drawableRight="@drawable/check_box"
+                    android:text="交通运输用途海岛"
+                    android:textColor="@color/color_8a8a8a" />
+
+                <toponymsystem.island.com.widget.CustomGridView
+                    android:id="@+id/gv_transportation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:paddingLeft="@dimen/padding_5dp"
+                    android:paddingRight="@dimen/padding_5dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

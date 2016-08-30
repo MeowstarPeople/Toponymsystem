@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_45dp"
+        android:background="@color/gray2"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:layout_weight="8"
+            android:background="@drawable/island_seek">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_text_island_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:drawableLeft="@drawable/icon_search"
+                android:drawablePadding="12dp"
+                android:dropDownAnchor="@id/linear"
+                android:hint="搜索海岛"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="14dp"
+                android:popupBackground="@drawable/border_seek_auto_text"
+                android:singleLine="true"
+                android:textColor="@color/dark_gray_color"
+                android:textSize="@dimen/fontSize_14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="取消"
+            android:textColor="@color/theme" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/UserGroupTextStyle"
+            android:text="查询结果" />
+
+        <View style="@style/Divider" />
+
+        <ListView
+            android:id="@+id/list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:background="@color/white"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</LinearLayout>

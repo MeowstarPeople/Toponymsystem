@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:paddingLeft="@dimen/padding_15dp"
+            android:paddingRight="@dimen/padding_15dp"
+            android:text="感谢您对海岛地名的支持，您的宝贵意见将帮助我们不断前进"
+            android:textColor="#444444"
+            android:textSize="@dimen/fontSize_12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginRight="@dimen/margin_15dp"
+        android:layout_marginTop="@dimen/height_10dp"
+        android:background="@drawable/border_background"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/suggestion_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:enabled="true"
+            android:gravity="left|top"
+            android:hint="写下你遇到的问题和建议"
+            android:inputType="textMultiLine"
+            android:maxLength="300"
+            android:maxLines="10"
+            android:minLines="8"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingRight="@dimen/padding_10dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:scrollbars="none"
+            android:textColor="#bbbbbb"
+            android:textSize="@dimen/fontSize_12sp" />
+
+        <TextView
+            android:id="@+id/maximum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="@dimen/margin_10dp"
+            android:layout_marginRight="@dimen/margin_15dp"
+            android:maxLength="300"
+            android:paddingRight="@dimen/padding_10dp"
+            android:textColor="#999999"
+            android:textSize="@dimen/fontSize_12sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/go_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:background="@drawable/drawable_button_selector"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fontSize_20sp" />
+</LinearLayout>

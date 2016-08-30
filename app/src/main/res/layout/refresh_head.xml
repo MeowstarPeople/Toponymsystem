@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/head_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/pull_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tableview_pull_refresh_arrow_down" />
+
+            <TextView
+                android:id="@+id/state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/pull_icon"
+                android:textColor="#868686"
+                android:textSize="15sp"
+                tools:text="下拉刷新" />
+
+            <ImageView
+                android:id="@+id/refreshing_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/state_tv"
+                android:src="@drawable/refresh_loading"
+                android:visibility="gone" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/state_iv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_toLeftOf="@id/state_tv"-->
+            <!--android:visibility="gone" />-->
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

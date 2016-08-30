@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_40dp">
+
+        <TextView
+            android:id="@+id/load_more"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray_color"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:gravity="center"
+            android:text="点击加载更多"
+            android:textSize="@dimen/fontSize_15sp" />
+    </RelativeLayout>
+</LinearLayout>

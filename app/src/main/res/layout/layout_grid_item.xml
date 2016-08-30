@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray_color"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/island_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_90dp"
+        android:scaleType="fitXY"
+        tools:src="@drawable/image" />
+
+    <TextView
+        android:id="@+id/island_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/fontSize_12sp"
+        tools:text="海岛" />
+</LinearLayout>

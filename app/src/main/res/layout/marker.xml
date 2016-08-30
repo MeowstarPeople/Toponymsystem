@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtIslandName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="@dimen/fontSize_10sp"
+        android:textStyle="bold|italic"
+        tools:text="西猪腰岛" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/width_25dp"
+        android:layout_height="@dimen/height_25dp"
+        android:src="@drawable/nav_turn_via_1" />
+
+</LinearLayout>

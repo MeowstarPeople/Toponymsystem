@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_20dp"
+    android:layout_marginRight="@dimen/margin_20dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_alert_message_dialog_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_35sp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/layout_custom_alert_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/fontSize_14sp"
+            tools:text=" 提示" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/layout_custom_alert_dialog_title"
+        android:background="@color/dark_gray_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_35sp"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/layout_custom_alert_dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="@dimen/fontSize_14sp"
+            tools:text="确定" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dark_gray_color" />
+
+    <LinearLayout
+        android:id="@+id/layout_alert_message_dialog_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_35sp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/layout_alert_message_dialog_left_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/layout_alert_message_dialog_left_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/theme"
+                android:textSize="@dimen/fontSize_14sp"
+                tools:text="取消" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/dark_gray_color" />
+
+        <RelativeLayout
+            android:id="@+id/layout_custom_alert_dialog_right_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/layout_custom_alert_dialog_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/theme"
+                android:textSize="@dimen/fontSize_14sp"
+                tools:text="确定" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_70dp">
+
+            <TextView
+                android:id="@+id/input_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="@string/input_phone_number" />
+
+            <ImageView
+                android:id="@+id/arrow_one"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@id/input_phone"
+                android:src="@drawable/arrow_login_right" />
+
+            <TextView
+                android:id="@+id/setting_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/arrow_one"
+                android:text="@string/setting_password"
+                android:textColor="@color/theme" />
+
+            <ImageView
+                android:id="@+id/arrow_two"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@id/setting_password"
+                android:src="@drawable/arrow_login_right" />
+
+            <TextView
+                android:id="@+id/sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/arrow_two"
+                android:text="@string/sms" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:text="手机号    " />
+
+            <TextView
+                android:id="@+id/tv_phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_marginLeft="@dimen/margin_50dp"
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:layout_toRightOf="@id/phone_number"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:textSize="@dimen/fontSize_14sp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/Divider"
+            android:layout_marginLeft="@dimen/margin_20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:text="密码        " />
+
+            <toponymsystem.island.com.widget.ClearEditText
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_marginLeft="@dimen/margin_50dp"
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:layout_toRightOf="@id/password"
+                android:inputType="textPassword"
+                android:background="@null"
+                android:hint="6-18位字母或数字"
+                android:maxLength="18"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/fontSize_14sp" />
+        </RelativeLayout>
+
+        <View
+            style="@style/Divider"
+            android:layout_marginLeft="@dimen/margin_20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/conformPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:text="确认密码" />
+
+            <toponymsystem.island.com.widget.ClearEditText
+                android:id="@+id/conformPassword_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bar_height"
+                android:layout_marginLeft="@dimen/margin_50dp"
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:layout_toRightOf="@id/conformPassword"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:hint="请再次输入密码"
+                android:maxLength="18"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/fontSize_14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/go_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_marginLeft="@dimen/margin_30dp"
+        android:layout_marginRight="@dimen/margin_30dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:background="@drawable/drawable_button_selector"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/fontSize_16sp" />
+</LinearLayout>

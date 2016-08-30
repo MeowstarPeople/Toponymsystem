@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/height_20dp"
+            android:layout_marginRight="@dimen/margin_20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/island_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/height_10dp"
+                android:layout_marginTop="@dimen/height_10dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fontSize_20sp"
+                android:textStyle="bold|italic"
+                tools:text="岛名" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/coordinates_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="经纬度："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontSize_16sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/coordinates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/coordinates_tv"
+                    android:textSize="@dimen/fontSize_15sp"
+                    tools:text="118.07，24.36" />
+
+                <ImageView
+                    android:id="@+id/location"
+                    android:layout_width="@dimen/height_20dp"
+                    android:layout_height="@dimen/height_20dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_toRightOf="@id/coordinates"
+                    android:src="@drawable/location" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_5dp">
+
+                <TextView
+                    android:id="@+id/dist_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="行政区域："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontSize_16sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/dist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/dist_tv"
+                    android:textSize="@dimen/fontSize_15sp"
+                    tools:text="行政区域" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp">
+
+                <TextView
+                    android:id="@+id/is_reside_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="是否有居民："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontSize_16sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/is_reside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/is_reside_tv"
+                    android:textSize="@dimen/fontSize_15sp"
+                    tools:text="是否有居民" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp">
+
+                <TextView
+                    android:id="@+id/is_develop_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否开发："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontSize_16sp"
+                    android:textStyle="bold|italic" />
+
+                <toponymsystem.island.com.widget.AlignTextView
+                    android:id="@+id/is_develop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/is_develop_tv"
+                    android:textSize="@dimen/fontSize_15sp"
+                    tools:text="是否有开发" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp">
+
+                <TextView
+                    android:id="@+id/usg_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="用途："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontSize_16sp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/usg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/usg_tv"
+                    android:textSize="@dimen/fontSize_15sp"
+                    tools:text="用途" />
+
+            </RelativeLayout>
+
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_5dp"
+                android:layout_marginTop="@dimen/margin_5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/details_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="详情介绍:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fontSize_16sp"
+                    android:textStyle="bold|italic" />
+
+                <toponymsystem.island.com.widget.AlignTextView
+                    android:id="@+id/details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:layout_marginTop="@dimen/margin_5dp"
+                    android:textSize="@dimen/fontSize_15sp"
+                    tools:text="详情" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/show_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="海岛风貌展示:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/fontSize_16sp"
+                android:textStyle="bold|italic"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_island_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

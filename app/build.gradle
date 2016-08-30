@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+def AAVersion = '3.3.2'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "toponymsystem.island.com"
+        minSdkVersion 12
+        targetSdkVersion 23
+        versionCode 2
+        versionName "1.0.0"
+    }
+    //签名
+    signingConfigs {
+        debug {
+            storeFile file("C:/Users/Yong/.android/debug.keystore")
+        }
+        release {
+            //这样写就得把demo.jk文件放在项目目录
+            storeFile file("key.jks")
+            storePassword "123456"
+            keyAlias "key"
+            keyPassword "123456"
+        }
+    }
+//    buildTypes {
+//        debug {
+//            // 显示Log
+//            buildConfigField "boolean", "LOG_DEBUG", "true"
+//            versionNameSuffix "-debug"
+//            minifyEnabled false
+//            zipAlignEnabled false
+//            shrinkResources false
+//            signingConfig signingConfigs.debug
+//        }
+//        release {
+//            // 不显示Log
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            //混淆
+//            minifyEnabled true
+//            //Zipalign优化
+//            zipAlignEnabled true
+//            // 移除无用的resource文件
+//            shrinkResources true
+//            //加载默认混淆配置文件
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            //签名
+//            signingConfig signingConfigs.release
+//        }
+//    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace(".apk", "-${defaultConfig.versionName}.apk")
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
+        // you should set your package name here if you are using different application IDs
+        resourcePackageName "toponymsystem.island.com"
+    }
+}
+dependencies {
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/okhttp-2.5.0.jar')
+    compile files('libs/retrofit-2.0.0-beta2.jar')
+    compile name: 'SMSSDK-2.0.2', ext: 'aar'
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile files('libs/jsoup-1.9.1.jar')
+    compile files('libs/baidumapapi_v2_3_1.jar')
+    compile files('libs/locSDK_6.13.jar')
+    compile 'de.greenrobot:eventbus:2.4.0'
+}

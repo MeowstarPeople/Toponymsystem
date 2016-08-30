@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:orientation="vertical">
+            <!-- 法律与申明 -->
+            <RelativeLayout
+                android:id="@+id/rl_law_declaration"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_35dp"
+                android:background="@color/light_gray_color"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/law_declaration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:text="法律与声明"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_15sp"
+                    android:textStyle="bold|italic" />
+
+                <ImageView
+                    android:id="@+id/iv_law_declaration_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/law_declaration_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_toLeftOf="@id/iv_law_declaration_right"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_14sp"
+                    android:textStyle="bold|italic"
+                    tools:text="共17条" />
+
+
+            </RelativeLayout>
+
+            <toponymsystem.island.com.widget.ListViewForScrollView
+                android:id="@+id/lv_law_declaration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginTop="5dp"
+                android:divider="@null"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 行政法规与国务院文件 -->
+            <RelativeLayout
+                android:id="@+id/rl_regulations_documents"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_35dp"
+                android:background="@color/light_gray_color"
+                android:padding="@dimen/padding_5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/regulations_documents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:text="行政法规与国务院文件"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_15sp"
+                    android:textStyle="bold|italic" />
+
+                <ImageView
+                    android:id="@+id/iv_regulations_documents_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/regulations_documents_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_toLeftOf="@id/iv_regulations_documents_right"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_14sp"
+                    android:textStyle="bold|italic"
+                    tools:text="共17条" />
+
+            </RelativeLayout>
+
+            <toponymsystem.island.com.widget.ListViewForScrollView
+                android:id="@+id/lv_regulations_documents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginTop="5dp"
+                android:divider="@null"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 部门规章 -->
+            <RelativeLayout
+                android:id="@+id/rl_departmental_rules"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_35dp"
+                android:background="@color/light_gray_color"
+                android:padding="@dimen/padding_5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/departmental_rules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:text="部门规章"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_15sp"
+                    android:textStyle="bold|italic" />
+
+                <ImageView
+                    android:id="@+id/iv_departmental_rules_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/departmental_rules_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_toLeftOf="@id/iv_departmental_rules_right"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_14sp"
+                    android:textStyle="bold|italic"
+                    tools:text="共17条" />
+
+            </RelativeLayout>
+
+            <toponymsystem.island.com.widget.ListViewForScrollView
+                android:id="@+id/lv_departmental_rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginTop="5dp"
+                android:divider="@null"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 规范性文件-海岛使用类 -->
+            <RelativeLayout
+                android:id="@+id/rl_island_using"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_35dp"
+                android:background="@color/light_gray_color"
+                android:padding="@dimen/padding_5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/island_using"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:text="规范性文件-海岛使用类"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_15sp"
+                    android:textStyle="bold|italic" />
+
+                <ImageView
+                    android:id="@+id/iv_island_using_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/island_using_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_toLeftOf="@id/iv_island_using_right"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_14sp"
+                    android:textStyle="bold|italic"
+                    tools:text="共17条" />
+
+            </RelativeLayout>
+
+            <toponymsystem.island.com.widget.ListViewForScrollView
+                android:id="@+id/lv_island_using"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginTop="5dp"
+                android:divider="@null"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 规范性文件-海岛保护类 -->
+            <RelativeLayout
+                android:id="@+id/rl_island_protection"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_35dp"
+                android:background="@color/light_gray_color"
+                android:padding="@dimen/padding_5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/island_protection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:text="规范性文件-海岛保护类"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_15sp"
+                    android:textStyle="bold|italic" />
+
+                <ImageView
+                    android:id="@+id/iv_island_protection_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/island_protection_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_toLeftOf="@id/iv_island_protection_right"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_14sp"
+                    android:textStyle="bold|italic"
+                    tools:text="共17条" />
+
+            </RelativeLayout>
+
+            <toponymsystem.island.com.widget.ListViewForScrollView
+                android:id="@+id/lv_island_protection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginTop="5dp"
+                android:divider="@null"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 规范性文件-海岛保护类 -->
+            <RelativeLayout
+                android:id="@+id/rl_island_others"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_35dp"
+                android:background="@color/light_gray_color"
+                android:padding="@dimen/padding_5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/island_others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:text="规范性文件-其他类"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_15sp"
+                    android:textStyle="bold|italic" />
+
+                <ImageView
+                    android:id="@+id/iv_island_others_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:src="@drawable/arrow_right" />
+
+                <TextView
+                    android:id="@+id/island_others_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:layout_toLeftOf="@id/iv_island_others_right"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/fontSize_14sp"
+                    android:textStyle="bold|italic"
+                    tools:text="共17条" />
+
+            </RelativeLayout>
+
+            <toponymsystem.island.com.widget.ListViewForScrollView
+                android:id="@+id/lv_island_others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginTop="5dp"
+                android:divider="@null"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
